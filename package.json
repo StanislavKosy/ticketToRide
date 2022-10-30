@@ -1,0 +1,29 @@
+{
+  "name": "tikettoride",
+  "version": "1.0.0",
+  "description": "тест",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StanislavKosy/ticketToRide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StanislavKosy/tiketToRide/issues"
+  },
+  "homepage": "https://github.com/StanislavKosy/tiketToRide#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "express-handlebars": "^6.0.6",
+    "hbs": "^4.2.0",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.8.0"
+  }
+}

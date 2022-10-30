@@ -1,0 +1,71 @@
+Player {
+	"name": "Stanislav",
+	"color": "blue",
+	"cards" : [
+		{
+			"color": "red",
+			"count": 1
+		},
+		{
+			"color": "blue",
+			"count": 1
+		}
+	],
+	"itineraries" : [
+		{
+			"level": 2,
+			"from" : "Moscow",
+			"to": "kiev",
+			"points": 21,
+			"status": "close"
+		}, 
+		{
+			"level": 1,
+			"from" : "Moscow",
+			"to": "Piter",
+			"points": 7,
+			"status": "open"
+		}
+	],
+	"trains": 20,
+	"station": 3,
+	"points": 50
+}
+
+Map {
+	"name" : "Europe",
+	"cities": [
+		{
+			"name": "Moscow",
+			"to": [
+				{
+					"name" : "Piter",
+					"rides": [
+						// тут типо координаты каждого поезда каждой дороги
+					]
+
+				}
+			]
+		}
+	]
+}
+
+City {
+	"name": "Moscow",
+	"to": [
+		{
+			"name" : "Piter",
+			"rides": [
+				// тут типо координаты каждого поезда каждой дороги
+			]
+		}
+	]
+}
+
+Itinerary {
+	"level": 2,
+	"from" : "Moscow",
+	"to": "kiev",
+	"points": 21,
+	"status": "close"
+}
