@@ -13,6 +13,9 @@ app.set("view engine", "hbs");
 app.use(express.static(__dirname + '/public'));
 app.use(fileUpload({}));
 
+
+
+
 app.use('/player', player);
 app.use('/map', map);
 app.use('/admin', admin);
