@@ -1,9 +1,69 @@
 $(document).ready(function(){
+	// загрузка маршрутов
    $("#button_for_itineraries").click(function() {
    		$('#box_for_itineraries').empty();
    		$('#box_for_itineraries').append('<div>маршрут1</div>');
-		//alert("Handler for .click() called.");
    });
+   //добавление маршрута
+   $("#button_for_create_itineraries").click(function() {
+   		$('#box_for_create_itineraries').empty();
+   		var str =
+			"<form>"+
+  			"<fieldset>"+
+    			"<legend>информация о маршруте</legend>"+
+    			"<p><label for=\"from\">откуда</label><input type=\"text\" id=\"from\"></p>"+
+    			"<p><label for=\"to\">куда</label><input type=\"text\" id=\"to\"></p>"+
+    			"<p><label for=\"power\">сложность</label><input type=\"text\" id=\"power\"></p>"+
+    			"<p><label for=\"points\">сколько очков</label><input type=\"text\" id=\"points\"></p>"+
+    			"<p><label for=\"for_map\">для какой карты</label><input type=\"text\" id=\"for_map\"></p>"+
+			"</fieldset>"+
+			"<p><input type=\"submit\" value=\"сохранить\"></p>"+
+			"</form>";
+   		$('#box_for_create_itineraries').append(str);
+   });
+   
+   // загрузка карты
+   $("#button_for_load_map").click(function() {
+   		$('#box_for_load_map').empty();
+   		var str = '<div><form action=\"/map/upload\" method=\"POST\" enctype=\"multipart/form-data\"><input type=\"file\" name=\"image\" /><button type=\"submit\">Upload</button></form></div>'
+   		$('#box_for_load_map').append(str);
+   });
+
+
+   
+   // настройка карты
+   $("#button_for_config_map").click(function() {
+   	//c сервака получаем названия карт http://localhost:3333/map/all
+	fetch('http://localhost:3333/map/all') // просто вернет список названия карт
+		.then((response) => {
+			return response.json();
+		})
+		.then((data) => {
+			$('#box_for_config_map').empty();
+			//ниже должен построить дивчик и заполнить его данными
+			// но прабла с асинхронностью
+			// страница выводится сразу, не ждет выполнения этого кода, ведь
+			// вот пока хз, как сказать, что нужно ждать
+			// мб паузу где-то поставить..
+			//что думаешь?
+			var str = "<div class=\"dropdown show\">"+
+			"<a class=\"btn btn-secondary dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">"+
+			"Выбрать карту"+
+			"</a>"+
+			"<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink\">";
+			for (var i = 0; i < data.length; i++) {
+				str + "<a class=\"dropdown-item\" href=\"#\">" + data[i] + "</a>";
+			}
+			str + "</div>";
+			str + "</div>";
+   			$('#box_for_config_map').append(str);
+		});		
+   });/*
+   // создание игры
+   $("#button_for_create_game").click(function() {
+   		$('#box_for_itineraries').empty();
+   		$('#box_for_itineraries').append('<div>маршрут1</div>');
+   });*/
 });
 
 
