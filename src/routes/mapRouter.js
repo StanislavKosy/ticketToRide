@@ -7,7 +7,10 @@ router.post('/upload', function (req, res) {
     res.render('admin/main');
 })
 
-router.get('/configure', function (req, res) {
+router.get('/configure/:name', function(req, res) {
+  console.log(req.params.name);
+  // типо взять из бд эту карту и отрисовать
+  // сейчас по дефолту будет city.jpg
   res.render("admin/configure-map.hbs")
 })
 

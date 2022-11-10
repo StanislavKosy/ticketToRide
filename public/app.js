@@ -30,7 +30,7 @@ $(document).ready(function(){
    });
 
 
-   
+   button_for_config_map
    // настройка карты
    $("#button_for_config_map").click(function() {
    	//c сервака получаем названия карт http://localhost:3333/map/all
@@ -40,23 +40,10 @@ $(document).ready(function(){
 		})
 		.then((data) => {
 			$('#box_for_config_map').empty();
-			//ниже должен построить дивчик и заполнить его данными
-			// но прабла с асинхронностью
-			// страница выводится сразу, не ждет выполнения этого кода, ведь
-			// вот пока хз, как сказать, что нужно ждать
-			// мб паузу где-то поставить..
-			//что думаешь?
-			var str = "<div class=\"dropdown show\">"+
-			"<a class=\"btn btn-secondary dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">"+
-			"Выбрать карту"+
-			"</a>"+
-			"<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink\">";
 			for (var i = 0; i < data.length; i++) {
-				str + "<a class=\"dropdown-item\" href=\"#\">" + data[i] + "</a>";
+				var str = "<a href=\"/map/configure/" + data[i] + "\">"+ data[i] + "</a></br>";
+				$('#box_for_config_map').append(str);
 			}
-			str + "</div>";
-			str + "</div>";
-   			$('#box_for_config_map').append(str);
 		});		
    });/*
    // создание игры
