@@ -18,9 +18,67 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    
-    <div class="container" id="box_for_picture_map">
+    <!--640*960-->
+    <div class="container_for_map" id="box_for_picture_map"></div>
+    <div class="myDiv" id="my_div"></div>
+    <!-------------------------------------------------------------------->
+<form>
+    <h2>Дорога</h2>
+        <label for="X">X</label>
+        <input type="Number" class="input_for_coordinate" id="X" placeholder="px">
+        <label for="Y">Y</label>
+        <input type="Number" class="input_for_coordinate" id="Y" placeholder="px">
         
-    </div>
+        <label for="corner">угол</label>
+        <input type="Number" class="input_for_corner" id="corner" placeholder="-30/30">
+
+        <label for="track">путь</label>
+        <input type="text" class="input_for_track" id="track" placeholder="AtoB/AtoB1">
+
+        <label for="color">цвет</label>
+        <input type="text" class="input_for_color" id="color" placeholder="red">
+
+        <label for="addCard">важная дорога</label>
+        <input type="text" class="input_for_addCard" id="addCard" placeholder="yes/no">
+
+  <button type="submit" class="btn btn-primary btn-md">сохранить</button> 
+  <!--
+    по нажатию создать/сохранить в файл
+    *ну и сделать, чтоб загружалась вся инфа
+    *и карта и инфа из этого файла сразу на карте отображалась
+  -->
+</form>
+
+<form>
+    <h2>Город</h2>
+        <label for="X">X</label>
+        <input type="Number" class="input_for_coordinate" id="X" placeholder="px">
+        <label for="Y">Y</label>
+        <input type="Number" class="input_for_coordinate" id="Y" placeholder="px">
+        
+        <label for="name">Y</label>
+        <input type="text" class="input_for_nameCity" id="name" placeholder="Moscow">
+  <button type="submit" class="btn btn-primary btn-md">сохранить</button> 
+  <!--
+    по нажатию создать/сохранить в файл
+    *ну и сделать, чтоб загружалась вся инфа
+    *и карта и инфа из этого файла сразу на карте отображалась
+  -->
+</form>
+
+
+<!-- Extended material form grid -->
+<!--
+    тут блочки для конфигурации карты
+    -поставить дорогу
+        *задать координаты
+        *повертеть
+        *нужный цвет
+        *нужны будут ли доп карты
+        *задать группу
+    -поставить город
+        *имя города
+        *координаты
+-->
 </body>
 <html>

@@ -1,0 +1,22 @@
+.container_for_map {
+    top: 0;
+    left: 0;
+    height: 640px;
+    width: 960px;
+    border: 1px solid Red;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.myDiv {
+    height: 100px;
+    width: 100px;
+    border: 2px solid Red;
+}
+.input_for_coordinate{
+    width: 100px;
+}
