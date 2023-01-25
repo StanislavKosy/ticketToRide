@@ -1,9 +1,10 @@
 .container_for_map {
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     height: 640px;
     width: 960px;
     border: 1px solid Red;
+    position: relative;
 }
 
 img{
@@ -19,4 +20,17 @@ img{
 }
 .input_for_coordinate{
     width: 100px;
+}
+
+.box_for_print_coordinats {
+    top: 0px;
+    left: 965px;
+    border: 1px solid Red;
+    height: 50px;
+    width: 250px;
+    position: absolute;
+}
+
+.road_config{
+    position: absolute;
 }

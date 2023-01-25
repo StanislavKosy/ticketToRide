@@ -19,29 +19,34 @@
 </head>
 <body>
     <!--640*960-->
-    <div class="container_for_map" id="box_for_picture_map"></div>
-    <div class="myDiv" id="my_div"></div>
+        <div class="container_for_map" id="box_for_picture_map"></div>
+        <div id="div_for_print_coordinats" class = "box_for_print_coordinats"></div>
+
+        <div class="myDiv" id="my_div"></div><!-- пример дороги-->
     <!-------------------------------------------------------------------->
-<form>
+<form method="post" action="/map/save_config_road">
     <h2>Дорога</h2>
         <label for="X">X</label>
-        <input type="Number" class="input_for_coordinate" id="X" placeholder="px">
+        <input type="Number" class="input_for_coordinate" id="X" placeholder="px" name="road[x]">
         <label for="Y">Y</label>
-        <input type="Number" class="input_for_coordinate" id="Y" placeholder="px">
+        <input type="Number" class="input_for_coordinate" id="Y" placeholder="px" name="road[y]">
         
         <label for="corner">угол</label>
-        <input type="Number" class="input_for_corner" id="corner" placeholder="-30/30">
+        <input type="Number" class="input_for_corner" id="corner" placeholder="-30/30" name="road[corner]">
 
         <label for="track">путь</label>
-        <input type="text" class="input_for_track" id="track" placeholder="AtoB/AtoB1">
+        <input type="text" class="input_for_track" id="track" placeholder="AtoB/AtoB1" name="road[track]">
 
         <label for="color">цвет</label>
-        <input type="text" class="input_for_color" id="color" placeholder="red">
+        <input type="text" class="input_for_color" id="color" placeholder="red" name="road[color]">
 
         <label for="addCard">важная дорога</label>
-        <input type="text" class="input_for_addCard" id="addCard" placeholder="yes/no">
+        <input type="text" class="input_for_addCard" id="addCard" placeholder="yes/no" name="road[addCard]">
 
-  <button type="submit" class="btn btn-primary btn-md">сохранить</button> 
+        <label for="countTrain">Колличество поездов</label>
+        <input type="Number" class="input_for_addTrain" id="countTrain" placeholder="0" name="road[countTrain]">
+
+  <button type="submit" class="btn btn-primary btn-md" id="button_save_road">сохранить</button> 
   <!--
     по нажатию создать/сохранить в файл
     *ну и сделать, чтоб загружалась вся инфа

@@ -30,7 +30,7 @@ $(document).ready(function(){
    });
 
 
-   button_for_config_map
+   //button_for_config_map
    // настройка карты
    $("#button_for_config_map").click(function() {
    	//c сервака получаем названия карт http://localhost:3333/map/all
